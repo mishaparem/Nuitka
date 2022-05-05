@@ -849,6 +849,7 @@ bool PRINT_FORMAT(char const *fmt, ...) {
     char buffer[4096];
 
     vsprintf(buffer, fmt, args);
+    va_end(args);
     return PRINT_STRING(buffer);
 }
 
